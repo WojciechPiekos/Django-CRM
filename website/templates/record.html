@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="card">
+    <div class="card-header">
+        {{ custom_record.first_name }} {{ custom_record.last_name }}
+    </div>
+    <div class="card-body">
+      <p class="card-text">
+        <strong>Email: </strong>{{ custom_record.email }} <br>
+        <strong>Phone: </strong>{{ custom_record.phone }} <br>
+        <strong>Address: </strong>{{ custom_record.address }} <br>
+        <strong>City: </strong>{{ custom_record.city }} <br>
+        <strong>State: </strong>{{ custom_record.state }} <br>
+        <strong>Zipcode: </strong>{{ custom_record.zipcode }} <br>
+        <strong>Created At: </strong>{{ custom_record.created_at }} <br>
+    </p>
+    </div>
+  </div>
+<br>
+<a href="{% url 'home' %}" class="btn btn-secondary">Back</a>
+
+{% endblock %}
